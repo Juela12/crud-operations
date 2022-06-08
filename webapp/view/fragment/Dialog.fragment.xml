@@ -1,0 +1,49 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+     xmlns:f="sap.ui.layout.form"
+     xmlns:l="sap.ui.layout">
+     <Dialog title = "INFORMATION">
+    <l:Grid defaultSpan = "L12 M12 S12" width = "auto" id = "idGrid">
+	<l:content>
+        <f:SimpleForm id="SimpleFormDisplay354"
+            minWidth="1024"
+            maxContainerCols="2"
+            editable="false"
+            layout="ResponsiveGridLayout"
+            title="Create"
+            labelSpanL="3"
+            labelSpanM="3"
+            emptySpanL="4"
+            emptySpanM="4"
+            columnsL="2"
+            columnsM="2">
+        <f:content>
+		  <VBox>
+
+                <Label text="First Name" />
+                <Input id = "idFirstName"
+                placeholder="Enter the Name"/>
+             
+                <Label text="Last Name" />
+                <Input id = "idLastName"
+                placeholder="Enter the Surname"/>
+             
+                
+
+                <Label text="Country" />
+                <Input id = "idBranch"
+                placeholder="Enter the Country"/>
+              
+        </VBox>
+        </f:content>
+        </f:SimpleForm>
+    </l:content>
+   </l:Grid>
+    <buttons>
+    <Button text = "CLOSE" press = "closeDialog" type = "Reject"/>
+    <Button text = "SAVE" press = "onSave" type = "Accept"/>
+     <Button text = "UPDATE" press = "onSave1" />
+    </buttons>
+    </Dialog>
+</core:FragmentDefinition>

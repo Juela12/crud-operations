@@ -1,0 +1,68 @@
+
+<mvc:View
+    controllerName="crud2.crud2.controller.App"
+   xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns:l="sap.ui.layout"
+	xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+    xmlns:ndc="sap.ndc"
+>
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>title}">
+              	<content>
+                <Table id="Table" items="{positionsTable2>/}" mode="SingleSelect">
+                     <headerToolbar>
+                     <OverflowToolbar>
+                     <Title text="Crud"/>
+                     <ToolbarSpacer/>
+                     <SearchField width = "20%" search="onSearch" />
+                     <Button text = "Delete"  press="onDelete"/>
+                     <Button text = "Update"  press="onUpdate"/>
+                     <Button text = "Create"  
+			        	press="onCreate"
+			         ariaHasPopup="Dialog"/>
+                     </OverflowToolbar>
+                     </headerToolbar>
+
+
+                   <columns>
+                  
+                   <Column>
+                   <Text text="Name"></Text>
+                   </Column>
+                   <Column>
+                   <Text text="Surname"></Text>
+                   </Column>
+                   <Column>
+                   <Text text="Date"></Text>
+                   </Column>
+                   <Column>
+                   <Text text="Time"></Text>
+                   </Column>
+                   <Column>
+                   <Text text="Country"></Text>
+                   </Column>
+                   
+                   </columns>
+                   <items  items="{positionsTable2>/}" >
+                   <ColumnListItem>
+                   <cells>
+                   <Text text="{positionsTable2>Name}"></Text>
+                   <Text text="{positionsTable2>Surname}"></Text>
+                    <Text text="{positionsTable2>Date1}"></Text>
+                     <Text text="{path:'positionsTable2>Time/ms', formatter: '.formatter.mstoTime' }"></Text>
+                      <Text text="{positionsTable2>Branch}"></Text>
+                       
+                      </cells>
+                      </ColumnListItem>
+                      </items>
+                   </Table>
+                </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>
